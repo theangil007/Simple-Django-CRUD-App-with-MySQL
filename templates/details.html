@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2><center>All Employee Details</center></h2>
+
+<table>
+  <tr>
+    <th>S.N</th>
+    <th>Full Name</th>
+    <th>Department</th>
+    <th>Address</th>
+    <th>Mobile Number</th>
+    <th>Email</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+    {%for i in key1%}
+    <td>{{i.id}}</td>
+    <td>{{i.Fullname}}</td>
+    <td>{{i.Department}}</td>
+    <td>{{i.Address}}</td>
+    <td>{{i.MobileNumber}}</td>
+    <td>{{i.Email}}</td>
+    <td><a href="/update/{{ i.id }}">Update</a></td>
+    <td><a href="/delete/{{ i.id }}">Delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
+

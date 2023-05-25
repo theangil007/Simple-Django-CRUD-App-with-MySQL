@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Edit APPLICATION</title>
+    </head>
+<body>
+    <center><h1>Edit Application</h1></center>
+    {%if key2 %}
+    <br/><center>
+    <table>
+        <form action="/" method="POST">
+        {% csrf_token %}
+        <tr>
+        <td>Full Name: </td>
+        <td><input type="inbox" name="fullname" value="{{key2.Fullname}}" placeholder="Enter your Full Name" required></td> 
+        </tr>
+        <td>Department : </td>
+        <td><input type="inbox" name="department" value="{{key2.Department}}" placeholder="Enter your department" required></td> 
+        </tr>
+        <td>Address : </td>
+        <td><input type="address" name="address" value="{{key2.Address}}" placeholder="Enter your address" required></td> 
+        </tr>
+        <td>Mobile Number :</td>
+        <td><input type="tel" name="mobilenumber" value="{{key2.MobileNumber}}" placeholder="Enter your mobile number" required></td> 
+        </tr>
+        <td>Email :</td>
+        <td><input type="email" name="email" value="{{key2.Email}}" placeholder="Enter your email" required></td> 
+        </tr>
+        {% endif %}
+        <td><input type="submit" value="Submit" style="margin-top:5px;background-color:#FFCF0B;font-weight:bold;outline:none;border:none;padding:5px"></td> 
+    </body>
+</html>

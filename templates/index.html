@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>CRUD APPLICATION</title>
+    </head>
+<body>
+    <center><h1>CRUD Application</h1></center>
+    <br/><center>
+    <table>
+        <form action="/" method="POST">
+        {% csrf_token %}
+        <tr>
+        <td>Full Name: </td>
+        <td><input type="inbox" name="fullname" placeholder="Enter your Full Name" required></td> 
+        </tr>
+        <td>Department : </td>
+        <td><input type="inbox" name="department" placeholder="Enter your department" required></td> 
+        </tr>
+        <td>Address : </td>
+        <td><input type="address" name="address" placeholder="Enter your address" required></td> 
+        </tr>
+        <td>Mobile Number :</td>
+        <td><input type="tel" name="mobilenumber" placeholder="Enter your mobile number" required></td> 
+        </tr>
+        <td>Email :</td>
+        <td><input type="email" name="email" placeholder="Enter your email" required></td> 
+        </tr>
+        <td><input type="submit" value="Submit" style="margin-top:5px;background-color:#FFCF0B;font-weight:bold;outline:none;border:none;padding:5px"></td> 
+
+    </body>
+</html>
